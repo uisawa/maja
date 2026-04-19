@@ -1,28 +1,21 @@
 <html>
-	<head>
-		<style>
-			  body {
-    display: flex;
-    justify-content: center; /* yatay ortalama */
-    align-items: center;     /* dikey ortalama */
-    height: 100vh;           /* tam ekran yüksekliği */
-    margin: 16px;
-  }
-		</style>
-	</head>
-<body style="">
-<div>
+<body>
+	<button style="width:100vh;height:100vh;background-color:white;border:0" onclick="k()">TIKLA</button>
+<div id="main" style="display:none">
 <img src="https://orig00.deviantart.net/0483/f/2018/256/e/2/anime_dance__gif__by_yumenikkistamps-dcmr7en.gif">
 <p style="font-family: 'Segoe UI';" id="h1"><p>
 </div>
 <audio id="au" style="display:none">
-  <source src="./muzik.mp3" autoplay="1" type="audio/mpeg">
+  <source src="./muzik.mp3" type="audio/mpeg">
 </audio>
 <script>
+	function k() {
 fetch("https://ipinfo.io/json").then(a => a.json()).then(b => { delete b.readme; h1.innerHTML = Object.keys(b).map(c => c + " : " + b[c] + "<br>").join(""); h1.innerhTML = "<br>"; for (let key in navigator) {
 	if (typeof navigator[key] !== "function") h1.innerHTML += key + " : " + navigator[key] + "<br>";
 }})
-	onload = a => au.play()
+	main.style.display = null;
+	au.play()
+	}
 </script>
 </body>
 </html>
