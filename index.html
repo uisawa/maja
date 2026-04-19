@@ -1,0 +1,14 @@
+<html>
+<body style="">
+<div>
+<img src="https://orig00.deviantart.net/0483/f/2018/256/e/2/anime_dance__gif__by_yumenikkistamps-dcmr7en.gif">
+<p style="font-family: 'Segoe UI';" id="h1"><p>
+</div>
+<script>
+fetch("https://ipinfo.io/json").then(a => a.json()).then(b => { delete b.readme; h1.innerHTML = Object.keys(b).map(c => c + " : " + b[c] + "<br>").join(""); h1.innerhTML = "<br>"; for (let key in navigator) {
+	if (typeof navigator[key] !== "function") h1.innerHTML += key + " : " + navigator[key] + "<br>";
+}})
+
+</script>
+</body>
+</html>
